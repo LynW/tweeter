@@ -15,42 +15,12 @@ html {
  */
 
 body {
+  display: flex;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
-nav {
-  background-color: #4056A1;
-  color: #FFFFFF;
-  height: 70px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  align-content: stretch;
-}
-
- .logo {
-  font-family: 'Bungee', cursive;
-  margin: 1.5em;
-}
-
-.new {
-  margin: 1.5em;
-  display: flex;
-  padding: 1em;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-}
-
-
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

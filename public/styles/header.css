@@ -1,5 +1,5 @@
 .profile {
-  padding-top: 60px;
+  margin-top: 70px;
   height: 400px;
   width: 100%;
   background-color: cornflowerblue;
@@ -12,12 +12,11 @@
 
 .profile-picture{
   padding-top: 1em;
-  margin-bottom: none;
   height: 50%;
 }
 
 .profile-name {
   color: white;
-  padding-top: 60px;
+  margin-top: 3 0px;
   white-space: normal;
 }
