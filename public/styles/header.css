@@ -8,15 +8,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  align-content: center;
 }
 
 .profile-picture{
   padding-top: 1em;
-  height: 50%;
+  height: 100%;
 }
 
 .profile-name {
   color: white;
-  margin-top: 3 0px;
-  white-space: normal;
 }
