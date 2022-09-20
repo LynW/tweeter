@@ -1,0 +1,24 @@
+header {
+  height: 400px;
+  width: 100%;
+  padding-top: 100px;
+  background-color: cornflowerblue;
+  background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-picture{
+  padding-top: 1em;
+  margin-bottom: none;
+}
+.profile-name{
+  display: flex;
+  color: white;
+  align-items: center;
+}
