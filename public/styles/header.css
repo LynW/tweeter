@@ -1,12 +1,9 @@
-header {
+.profile {
+  padding-top: 60px;
   height: 400px;
   width: 100%;
-  padding-top: 100px;
   background-color: cornflowerblue;
   background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
-}
-
-.profile {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,9 +13,11 @@ header {
 .profile-picture{
   padding-top: 1em;
   margin-bottom: none;
+  height: 50%;
 }
-.profile-name{
-  display: flex;
+
+.profile-name {
   color: white;
-  align-items: center;
+  padding-top: 60px;
+  white-space: normal;
 }

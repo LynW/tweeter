@@ -30,6 +30,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  align-content: stretch;
 }
 
  .logo {
@@ -42,9 +43,10 @@ nav {
   display: flex;
   padding: 1em;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
 }
 
 
