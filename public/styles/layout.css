@@ -55,15 +55,18 @@ body {
   color: white;
  }
 
-.character-length {
+.bungee-font {
   font-family: 'Bungee', cursive;
 }
 
+/* Tweet button and character length */
  .form-group {
   display: flex;
   justify-content: space-between;
  }
 
+
+/* Container for each tweet */
  .tweet-container {
   border-style: solid;
   margin: 0 auto;
@@ -72,6 +75,11 @@ body {
   border-width: 3px;
  }
 
+ .tweet-container:hover {
+  box-shadow: 6px 6px #7784af;
+ }
+
+ /* Footer items */
  .tweet-footer {
   background-color: transparent;
   border-right: none;
@@ -91,6 +99,17 @@ body {
   margin-right: 5px;
  }
 
+ /* Icon colours */
+ .fa-flag, .fa-retweet, .fa-heart {
+  color: #52639e;
+ }
+
+ .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
+  color: #da8f25;
+ }
+
+
+ /* Header items */
  .tweet-header {
   display: flex;
   justify-content: space-between;
@@ -101,10 +120,12 @@ body {
   font-size: 19px;
  }
 
+ /* User icon and name */
  .tweet-header-right{
   vertical-align: middle;
  }
 
+ /* Tweeter handle */
  .handle {
   display: flex;
   vertical-align: middle;
