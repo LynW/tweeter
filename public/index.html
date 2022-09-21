@@ -47,15 +47,43 @@
 
       <section class="form-body">
         <form action="" id="form">
-            <textarea name="" id="tweet" cols="30" rows="10" placeholder="What are you humming about?"></textarea>
-            <input type="submit" value="Tweet" class="tweet-button">
+            <textarea name="" id="tweet" cols="30" rows="10" placeholder="What are you humming about?" maxlength="50"></textarea>
+            <section class="form-group">
+              <input type="submit" value="Tweet" class="tweet-button">
+              <section class="character-length">160</section>
+          </section>
         </form>
       </section>
 
-      <section class="tweet-dashboard">
-
+      <section class="tweet-container">
+        <article class="tweet-entry">
+          <header class="tweet-header">
+            <section>
+              <img class="tweet-header-right" src="https://i.imgur.com/73hZDYK.png">
+              <span>Newton</span>
+            </section>
+            <section>
+              <span>@SirIssac</span>
+            </section>
+          </header>
+          <p>TWEET</p>
+          <footer class="tweet-footer">
+            <section>10 Days ago</section>
+            <section><i class="fa-solid fa-flag"></i><i class="fa-sharp fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></section>
+        </article>
       </section>
-          
+      
+      <section class="tweet-container">
+        <article class="tweet-entry">
+          <header>Header Items</header>
+          <p>TWEET</p>
+          <footer class="tweet-footer">
+            <section>10 Days ago</section>
+            <section><i class="fa-solid fa-flag"></i><i class="fa-sharp fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></section>
+          </footer>
+        </article>
+      </section>
+      
     </main>
   </body>
 </html>
