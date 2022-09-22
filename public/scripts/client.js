@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function() {
+
   const createTweetElement = function (tweetObject) {
     const tweet = `
     <section class="tweet-container">
@@ -37,29 +37,9 @@ $(document).ready(function() {
        $('.tweets').prepend(tweetElement);
     }
   }
-});
-
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-}
-
-const $tweet = createTweetElement(tweetData);
-
-
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
- // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
  // Fake data taken from initial-tweets.json
-const data = [
+ const data = [
   {
     "user": {
       "name": "Newton",
@@ -85,3 +65,6 @@ const data = [
 ]
 
 renderTweets(data);
+
+
+
