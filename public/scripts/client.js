@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
+$(document).ready(function() {
   const createTweetElement = function (tweetObject) {
     const tweet = `
     <section class="tweet-container">
@@ -38,7 +38,26 @@
     }
   }
 
- // Fake data taken from initial-tweets.json
+  $('.tweet-form').submit(function(event) {
+    console.log('Button clicked, performing ajax call...')
+    event.preventDefault();
+    const $tweetBox = $(this).find('#tweet-text');
+    const tweetSerialized = $tweetBox.serialize();
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: tweetSerialized
+    })
+      .then(function(data) {
+        console.log('Success');
+      })
+      .catch(function(err){
+        console.log(err);
+      })
+  });
+
+
+   // Fake data taken from initial-tweets.json
  const data = [
   {
     "user": {
@@ -66,5 +85,9 @@
 
 renderTweets(data);
 
+console.log("Test");
+
+
+});
 
 

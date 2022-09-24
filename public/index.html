@@ -3,7 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
+    
     <!-- Font Awesome - Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -46,8 +46,8 @@
     <main class="container">
 
       <section class="form-body">
-        <form action="" id="form">
-            <textarea name="" id="tweet" cols="30" rows="10" placeholder="What are you humming about?" maxlength="50"></textarea>
+        <form action="/tweets/" method="POST" class="tweet-form">
+            <textarea name="" id="tweet" cols="30" rows="10" placeholder="What are you humming about?"></textarea>
             <section class="form-group">
               <input type="submit" value="Tweet" class="tweet-button">
               <section class="bungee-font">160</section>
