@@ -60,6 +60,14 @@ $(document).ready(function() {
     event.preventDefault();
     const $tweetBox = $(this).find('#tweet-text');
     const tweetSerialized = $tweetBox.serialize();
+    const textLength = $("#tweet-text").val().length;
+
+    if (textLength === 0) {
+      return alert("Tweet cannot be empty");
+    } else if (textLength > 140) {
+      return alert("Tweet must be less than 140 characters");
+    } 
+
     $.ajax({
       method: 'POST',
       url: '/tweets',
