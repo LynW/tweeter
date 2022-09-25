@@ -41,7 +41,7 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax({
       method: 'GET',
-      url: '/tweets'
+      url: 'http://localhost:8080/tweets'
     })
       .then(function(data) {
         console.log("loadTweets success:");
@@ -56,30 +56,32 @@ $(document).ready(function() {
   loadTweets();
 
   $('.tweet-form').submit(function(event) {
-    console.log('Button clicked, performing ajax call...')
     event.preventDefault();
     const $tweetBox = $(this).find('#tweet-text');
-    const tweetSerialized = $tweetBox.serialize();
+    const tweetSerialized = $(this).serialize();
     const textLength = $("#tweet-text").val().length;
 
     if (textLength === 0) {
-      return alert("Tweet cannot be empty");
+      $(".error").text("Tweet cannot be empty");
+      $(".error").slideDown(500).delay(3000).slideUp();
     } else if (textLength > 140) {
-      return alert("Tweet must be less than 140 characters");
-    } 
-
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: tweetSerialized
-    })
-      .then(function(data) {
-        console.log('Success');
+      $(".error").text("Tweet must be less than 140 characters");
+      $(".error").slideUp(500).delay(3000).slideDown();
+    } else {
+      $.ajax({
+        method: 'POST',
+        url: 'http://localhost:8080/tweets',
+        data: tweetSerialized
       })
-      .catch(function(err){
-        console.log("Submit error:")
-        console.log(err);
-      })
+        .then(function(data) {
+          console.log('Success', data);
+          $("#tweet-text").val("");
+        })
+        .catch(function(err){
+          console.log("Submit error:")
+          console.log(err);
+        })
+    }
   });
 
   const escape = function(str) {
