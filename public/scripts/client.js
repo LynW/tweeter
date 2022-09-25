@@ -17,7 +17,7 @@ $(document).ready(function() {
               <span>${tweetObject.user.handle}</span>
             </section>
           </header>
-          <p>${tweetObject.content.text}</p>
+          <p>${escape(tweetObject.content.text)}</p>
           <footer class="tweet-footer">
             <section>${timeago.format(tweetObject.created_at)} </section>
             <section>
@@ -81,6 +81,12 @@ $(document).ready(function() {
         console.log(err);
       })
   });
+
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
 console.log("Test");
 
