@@ -41,14 +41,12 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax({
       method: 'GET',
-      url: 'http://localhost:8080/tweets'
+      url: '/tweets'
     })
       .then(function(data) {
-        console.log("loadTweets success:");
         renderTweets(data);
       })
       .catch(function(err) {
-        console.log("loadTweets error:");
         console.log(err);
       })
   };
@@ -69,7 +67,7 @@ $(document).ready(function() {
     } else {
       $.ajax({
         method: 'POST',
-        url: 'http://localhost:8080/tweets',
+        url: '/tweets',
         data: tweetSerialized
       })
         .then(function(data) {
