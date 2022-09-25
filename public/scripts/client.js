@@ -74,8 +74,9 @@ $(document).ready(function() {
         data: tweetSerialized
       })
         .then(function(data) {
-          console.log('Success', data);
+          console.log('Success:', data);
           $("#tweet-text").val("");
+          loadTweets();
         })
         .catch(function(err){
           console.log("Submit error:")
