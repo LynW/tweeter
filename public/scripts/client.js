@@ -57,7 +57,6 @@ $(document).ready(function() {
 
   $('.tweet-form').submit(function(event) {
     event.preventDefault();
-    const $tweetBox = $(this).find('#tweet-text');
     const tweetSerialized = $(this).serialize();
     const textLength = $("#tweet-text").val().length;
 
@@ -79,8 +78,8 @@ $(document).ready(function() {
           loadTweets();
         })
         .catch(function(err){
-          console.log("Submit error:")
-          console.log(err);
+          console.log("Error:", err)
+
         })
     }
   });
