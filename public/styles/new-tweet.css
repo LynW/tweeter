@@ -25,3 +25,7 @@ textarea {
   display: flex;
   justify-content: space-between;
  }
+
+ .counter-warning {
+  color: red;
+}
