@@ -28,8 +28,8 @@ body {
  main {
   width: 90%;
   margin: 0 auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
+  padding: 1em;
  }
 
 .bungee-font {
@@ -103,3 +103,27 @@ body {
   color: cadetblue;
  }
 
+ .header-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+ @media screen and (min-width: 1024px) {
+
+  .header-content{
+    flex-direction: row;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 1em;
+  }
+
+}
