@@ -5,6 +5,13 @@
  */
 
 $(document).ready(function() {
+
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function (tweetObject) {
     const tweet = `
     <section class="tweet-container">
@@ -44,14 +51,13 @@ $(document).ready(function() {
       url: '/tweets'
     })
       .then(function(data) {
+        $(".tweets").empty();
         renderTweets(data);
       })
       .catch(function(err) {
         console.log(err);
       })
   };
-
-  loadTweets();
 
   $('.tweet-form').submit(function(event) {
     event.preventDefault();
@@ -71,7 +77,6 @@ $(document).ready(function() {
         data: tweetSerialized
       })
         .then(function(data) {
-          console.log('Success:', data);
           $("#tweet-text").val("");
           loadTweets();
         })
@@ -82,14 +87,7 @@ $(document).ready(function() {
     }
   });
 
-  const escape = function(str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
-
-console.log("Test");
+  loadTweets();
+  
 
 });
-
-
